@@ -1,0 +1,3 @@
+[submodule "libAppPAL"]
+	path = libAppPAL
+	url = https://github.com/bogwonch/libAppPAL
