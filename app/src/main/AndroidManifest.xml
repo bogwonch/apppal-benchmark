@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".BenchmarkActivity"
+            android:label="@string/title_activity_benchmark" >
+        </activity>
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

@@ -1,0 +1,17 @@
+(defun make-lines (out target forking)
+  (declare (fixnum target forking))
+  (let ((limit (/ target forking)))
+    (loop for n upfrom 1 upto limit do
+	 (dotimes (x forking)
+	   (format out "'~a' says '~a' can-say 'X' isInstallable.~%" n (+ (* n forking) x))))))
+
+(make-lines t 10 3)
+
+
+(defun make-policy (target forking)
+  (declare (fixnum target forking))
+  (with-open-file (out (format nil "~a-~a.policy" forking target))
+	     (make-lines out target forking)))
+
+
+(make-policy 10 2)

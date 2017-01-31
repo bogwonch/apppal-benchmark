@@ -8,9 +8,166 @@
                 android:paddingBottom="@dimen/activity_vertical_margin"
                 tools:context=".MainActivity">
 
-    <TextView
-        android:text="@string/hello_world"
+    <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Small Straight Policy (10 statements)"
+                android:id="@+id/buttonSmallStraight"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:onClick="onClickButton_1_10"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Medium Straight Policy (100 statements)"
+                android:id="@+id/buttonMediumStraight"
+                android:onClick="onClickButton_1_100"
+                android:layout_below="@+id/buttonSmallStraight"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/buttonSmallStraight"
+                android:layout_alignEnd="@+id/button_1_Straight"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Large Straight Policy (500 statements)"
+                android:id="@+id/buttonLargeStraight"
+                android:onClick="onClickButton_1_500"
+                android:layout_below="@+id/buttonMediumStraight"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/buttonMediumStraight"
+                android:layout_alignEnd="@+id/buttonMediumStraight"
+                android:nestedScrollingEnabled="true"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Huge Straight Policy (1000 statements)"
+                android:id="@+id/buttonHugeStraight"
+                android:onClick="onClickButton_1_1000"
+                android:layout_below="@+id/buttonLargeStraight"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/buttonLargeStraight"
+                android:layout_alignEnd="@+id/buttonLargeStraight"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Small Binary Policy (10 statements)"
+                android:id="@+id/button"
+                android:onClick="onClickButton_2_10"
+                android:layout_below="@+id/buttonHugeStraight"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/buttonHugeStraight"
+                android:layout_alignEnd="@+id/buttonHugeStraight"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Medium Binary Policy (100 statements)"
+                android:id="@+id/button2"
+                android:onClick="onClickButton_2_100"
+                android:layout_below="@+id/button"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/button"
+                android:layout_alignEnd="@+id/button"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Large Binary Policy (500 statements)"
+                android:id="@+id/button3"
+                android:onClick="onClickButton_2_500"
+                android:nestedScrollingEnabled="true"
+                android:layout_below="@+id/button2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/button2"
+                android:layout_alignEnd="@+id/button2"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Huge Binary Policy (1000 statements)"
+                android:id="@+id/button4"
+                android:onClick="onClickButton_2_1000"
+                android:layout_below="@+id/button3"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/button3"
+                android:layout_alignEnd="@+id/button3"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Small Trinary Policy (10 statements)"
+                android:id="@+id/button5"
+                android:onClick="onClickButton_3_10"
+                android:layout_below="@+id/button4"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/button4"
+                android:layout_alignEnd="@+id/button4"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Medium Trinary Policy (100 statements)"
+                android:id="@+id/button6"
+                android:onClick="onClickButton_3_100"
+                android:layout_below="@+id/button5"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/button5"
+                android:layout_alignEnd="@+id/button5"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Large Trinary Policy (500 statements)"
+                android:id="@+id/button7"
+                android:onClick="onClickButton_3_500"
+                android:nestedScrollingEnabled="true"
+                android:layout_below="@+id/button6"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/button6"
+                android:layout_alignEnd="@+id/button6"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Huge Trinary Policy (1000 statements)"
+                android:id="@+id/button8"
+                android:onClick="onClickButton_3_1000"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/button7"
+                android:layout_alignRight="@+id/button7"
+                android:layout_alignEnd="@+id/button7"/>
+        </LinearLayout>
+    </ScrollView>
+
 
 </RelativeLayout>
